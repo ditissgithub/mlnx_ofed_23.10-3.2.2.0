@@ -39,7 +39,9 @@ RUN yum -y install curl && (curl  ${D_OFED_URL_PATH} | tar -xzf -)
 RUN yum install -y  python2-devel python2 dnf-utils && \
     yum install -y  infiniband-diags
 
-RUN yum -y install autoconf automake binutils ethtool gcc git hostname kmod libmnl libtool lsof make pciutils perl procps python36 python36-devel rpm-build tcl tk wget
+RUN yum -y install autoconf automake binutils ethtool gcc git hostname \
+    kmod libmnl libtool lsof make pciutils perl procps python36 python36-devel rpm-build tcl tk \
+    wget iproute-6.2.0-6.el8_10.x86_64
 
 
 

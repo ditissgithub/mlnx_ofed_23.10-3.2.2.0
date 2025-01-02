@@ -44,8 +44,8 @@ RUN yum -y install autoconf automake binutils ethtool gcc git hostname kmod libm
 
 
 WORKDIR /
-ADD ./entrypoint.sh /root/entrypoint.sh
+ADD ./mlnxofedinstall.sh /root/mlnxofedinstall.sh
 
-RUN chmod +x /root/entrypoint.sh
+RUN chmod +x /root/mlnxofedinstall.sh
 
-ENTRYPOINT ["/root/entrypoint.sh"]
+ENTRYPOINT ["/root/mlnxofedinstall.sh"]
